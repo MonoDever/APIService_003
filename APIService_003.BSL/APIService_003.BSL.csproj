@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Service\" />
+    <None Remove="IService\" />
+    <None Remove="BSLUtility\" />
+    <None Remove="BSLUtility\Validation\" />
+    <None Remove="BSLUtility\EmailTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\" />
+    <Folder Include="IService\" />
+    <Folder Include="BSLUtility\" />
+    <Folder Include="BSLUtility\Validation\" />
+    <Folder Include="BSLUtility\EmailTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\APIService_003.DTO\APIService_003.DTO.csproj" />
+    <ProjectReference Include="..\APIService_003.DAL\APIService_003.DAL.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.30.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.30.0" />
+    <PackageReference Include="MimeKit" Version="4.0.0" />
+    <PackageReference Include="MailKit" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="7.0.5" />
+  </ItemGroup>
+</Project>
